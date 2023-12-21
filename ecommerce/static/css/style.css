@@ -1,0 +1,27 @@
+body
+{
+background-color:#7be022;
+font-family: 'Crimson Text', serif;}
+
+.footer
+{
+height:50px;
+width:100%;
+background-color:white;
+position:fixed;
+left:0;
+bottom:0;
+text-align:center;
+font-weight:bold;
+}
+
+h4
+{
+font-color:red;
+font-weight:bold;
+}
+
+
+
+.table-bordered{
+border-color:black;}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <img src="{% static 'images/page.jpg' %}" height="450px" width="100%">
+</div>
+<div class="container-fluid mt-4" style="margin-bottom:50px;">
+    <h3 class="text-center"> OUR COLLECTIONS</h3>
+    <p style="line-height:1.8;text-align:justify;">We offer a full range of e-Commerce tools designed to enable greater spend control for your procurement staff, providing your researchers with ease of access to the products they’ve come to rely on.An ecommerce website is a website that allows you to buy and sell tangible goods, digital products, or services online.
+
+Trade, be it barter exchange or the buying and selling of goods and services, has been prevalent for centuries. No one can be self-sufficient. And this brings out the need for demand and supply of goods and services.
+
+Transactions have been going on all over the world for centuries, locally and across locations. Keeping the same concept in mind, now think electronic.
+
+However, also bear in mind that with the whole world going online, data privacy laws have become increasingly stringent. Before you begin an eCommerce venture, you should be aware of all the legal policies required for your eCommerce website.</p>
+</div>
+<div class="container-fluid mt-4" style="margin-bottom:100px;">
+<div class="row">
+    {% for i in c %}
+
+<div class="col-md-4">
+            <div class="card" style="width: 18rem;margin-bottom:100px;">
+                <img src="{{i.img.url}}" height="150px" width="110%" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{i.name}}</h5>
+                    <p class="card-text">{{i.desc}}</p>
+                    <a href="{% url 'shop:allproducts' i.name %}" class="btn btn-primary">PRODUCTS</a>
+                </div>
+            </div>
+     </div>
+
+     {% endfor %}
+
+</div>
+
+{% endblock %}
+
+</div>

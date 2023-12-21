@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<table class="table table-bordered">
+    {% for i in c %}
+    <tr>
+        <td><img src="{{i.product.img.url}}" style="height:250px;"> </td>
+        <td class="fw-bold">{{i.user.username}}</td>
+        <td class="fw-bold">{{i.address}}<br>
+            {{i.phone}}<br>
+            {{i.product}}<br>
+
+            <b>{{i.product.price}}</b><br>
+            {{i.date_ordered}}<br>
+            {{i.delivery_status}}
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
